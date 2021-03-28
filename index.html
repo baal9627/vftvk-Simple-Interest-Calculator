@@ -1,16 +1,88 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <title>Web App - Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        
+<table class="center">
+    <tr><td>
+        Amount </td> <td><input type="number"  id="principal">  
+            </td></tr> 
+    <tr><td>
+        <label> Interest Rate </label> </td>
+        <td>
+         <input type="range" min="0.0" max="20.0" value="0.0" step="0.5" id="rate" oninput="document.getElementById('irate').innerHTML = this.value" /> 
+        <label id="irate">  </label> %
+        </td>
+    </tr>
+        <tr><td>
+            No. of Years</td><td> <label for="years">No. of Years</label>
+  <select id="years" name="years">
+    <option value=1>1</option>
+    <option value=2>2</option>
+    <option value=3>3</option>
+    <option value=4>4</option>
+    <option value=5>5</option>
+    <option value=6>6</option>
+    <option value=7>7</option>
+    <option value=8>8</option>  
+    <option value=9>9</option>
+    <option value=10>10</option>
+    <option value=11>11</option>
+    <option value=12>12</option>
+      <option value=13>13</option>
+    <option value=14>14</option>
+    <option value=15>15</option>
+    <option value=16>16</option>
+      <option value=17>17</option>
+    <option value=18>18</option>
+    <option value=19>19</option>
+    <option value=20>20</option>
+  </select>
+            </td>
+    </tr>
+        </tr>
+        <tr><td>
+        <button onclick="compute1()">Compute Interest</button>
+            </td><td></td>
+   <tr><td>
+        <p id="line1t"></p>
+       </td>
+       <td>
+       <p id="line1n"></p>
+    </td>
+    </tr> 
+    <tr><td>
+        <p id="line2t"></p>
+    </td>
+        <td>
+        <p id="line2n"></p>
+    </td>
+    </tr> 
+    <tr><td>
+        <p id="line3t"></p>
+    </td>
+        <td>
+        <p id="line3n"></p>
+    </td>
+    </tr> 
+    <tr><td>
+        <p id="line4t"></p>
+    </td>
+        <td>
+        <p id="line4n"></p>
+    </td>
+    </tr> 
+    </table>    
+     <p id="demoa"></p>
+    <p id="demob"></p>
+         <p id="democ"></p>
+        <footer>
+         &copy Everyone Can Get Rich
+        </footer>
     </body>
 </html>
